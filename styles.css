@@ -1,0 +1,245 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font: 100% "Work Sans", Helvetica, sans-serif;
+  color: #616161;
+}
+/*-------------Incia el saludos------------*/
+.inicio {
+  position: relative;
+  min-width: 100%;
+  height: 90vh;
+  width: 100%;
+}
+
+.proyecto,
+.contacto,
+footer {
+  text-align: center;
+}
+
+.inicio .inicio-texto {
+  position: fixed;
+  margin-top: 2rem;
+}
+
+.inicio h1 {
+  width: 60%;
+  font-size: 5rem;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.saludo {
+  max-width: 64rem;
+  margin-left: 20%;
+  padding: 0 1rem;
+}
+
+.inicio span {
+  font-size: 5rem;
+  color: rgb(3, 42, 233);
+}
+
+/*-------------finaliza el saludo------------*/
+
+/*-------------ininicia el menu--------------*/
+.proyecto {
+  justify-content: center;
+  background-color: #ebe7e7;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+  padding-left: 15em;
+  padding-right: 15em;
+  max-width: 100%;
+  height: 100%;
+}
+
+.proyecto-imagenes a {
+  position: relative;
+}
+
+a .proyecto-item {
+  cursor: pointer;
+}
+
+.proyecto-figura {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.proyecto-figura img {
+  width: 100%;
+  height: 100%;
+  transition: all 500ms ease-in-out;
+}
+
+.proyecto-texto {
+  position: absolute;
+  top: 20%;
+  right: 45%;
+  width: 100%;
+  color: #ffffff;
+  font-size: 1.5rem;
+  letter-spacing: 0.4rem;
+  transition: all 1s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.proyecto-imagenes:hover .proyecto-texto {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, 50%);
+}
+
+.proyecto-imagenes:hover .proyecto-figura img {
+  opacity: 0.5;
+  filter: brightness(50%);
+  transform: scale(1.3);
+}
+
+/*-------------finaliza el menu--------------*/
+
+footer {
+  position: relative;
+  margin-top: 50px;
+}
+
+.fondo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.button {
+  width: 500px;
+  height: 120px;
+  margin-top: 9rem;
+  background: #001aff;
+  position: relative;
+  left: 40%;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.button-wrapper,
+.text,
+.icon {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #ffffff;
+}
+
+.text {
+  top: 0;
+}
+
+.text,
+.icon {
+  transition: top 0.45s;
+}
+
+.icon {
+  color: #401ffa;
+  top: 100%;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+  transition: all 0.5s ease-in-out;
+  background: #ffffff;
+}
+
+.button:hover .text {
+  top: -100%;
+}
+
+.button:hover .icon {
+  top: 0;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: #cac9c9;
+}
+
+footer li {
+  list-style: none;
+  margin: 1rem;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 1200px) {
+  .saludo {
+    padding: 0rem;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .inicio {
+    top: 25px;
+    height: 50vh;
+    width: 100%;
+  }
+
+  .inicio h1 {
+    width: 60%;
+    font-size: 2rem;
+    font-size: calc(2rem + 1vw);
+    line-height: 1.4;
+    font-weight: 400;
+  }
+
+  .inicio span {
+    width: 70%;
+    font-size: 2rem;
+    font-size: calc(2rem + 1vw);
+    line-height: 1.4;
+    font-weight: 400;
+  }
+
+  .proyecto {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0rem;
+  }
+
+  .proyecto-figura {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+
+  .button {
+    height: 100px;
+    width: 300px;
+    left: 35%;
+  }
+}
