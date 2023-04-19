@@ -119,7 +119,7 @@ figure img {
 
 .icon {
   top: 100%;
-  font-size: 1.8rem;
+  font-size: 0.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -313,7 +313,7 @@ li a {
 
   .proyecto-texto {
     position: absolute;
-    top: 15%;
+    top: -30px;
     left: -50%;
     width: 100%;
     color: #ffffff;
